@@ -1,0 +1,57 @@
+.navigation {
+  padding: 48px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__search {
+    height: 56px;
+  }
+
+  &__menu {
+    position: relative;
+    height: 56px;
+  }
+
+  @include breakpoint-down(mobile) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__search {
+      margin-bottom: 3.125rem;
+    }
+  }
+}
+
+.countries {
+  padding-bottom: 48px;
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 74px;
+  }
+
+  &__error {
+    position: absolute;
+    z-index: 1;
+  }
+
+  @include breakpoint-down(tablet) {
+    &__wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+  }
+
+  @include breakpoint-down(mobile) {
+    &__wrapper {
+      grid-template-columns: 1fr;
+      gap: 3.125rem 0;
+    }
+  }
+}

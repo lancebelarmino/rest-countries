@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/header.ejs') %>
+
+  <section class="country">
+    <div class="container">
+      <div class="country__wrapper">
+        <a href="/" class="btn btn__back">
+          <span class="country-btn__icon">
+            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 8H1M1 8L8 15M1 8L8 1" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          Back
+        </a>
+
+        <div class="block country__block">
+          <img src="" alt="" class="block__img js-blockImage">
+          
+          <div class="block__content">
+            <h1 class="block__title js-blockTitle"></h1>
+
+            <div class="block__detail-group js-blockGroup1"></div>
+
+            <div class="block__detail-group js-blockGroup2"></div>
+
+            <div class="block__tag js-blockTag">
+              <p class="block__tag-title">Border Countries:</p>
+              <a href="" class="block__tag-item">France</a>
+              <a href="" class="block__tag-item">Afghanistan</a>
+              <a href="" class="block__tag-item">France</a>
+              <a href="" class="block__tag-item">France</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./country.bundle.js"></script>
+</body>
+</html>

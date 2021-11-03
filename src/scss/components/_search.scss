@@ -1,0 +1,34 @@
+.search {
+  &__input {
+    position: relative;
+    height: 100%;
+  }
+
+  &__prompt {
+    display: block;
+    width: 480px;
+    height: 100%;
+    padding: 0 4.5rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.05);
+    
+      &::placeholder {
+        color: color(light-mode, input);
+      }
+  }
+    
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+  }
+
+  @include breakpoint-down(mobile) {
+    &__prompt {
+      width: 100%;
+    }
+  }
+}

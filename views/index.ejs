@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/header.ejs') %>
+
+  <section class="navigation">
+    <div class="container">
+      <div class="navigation__wrapper">
+        <div class="search navigation__search">
+          <form class="search__input">
+            <input type="text" class="search__prompt js-searchPrompt" placeholder="Search for a country...">
+            <span class="search__icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 17L11 11M12 6.5C12 9.53757 9.53757 12 6.5 12C3.46243 12 1 9.53757 1 6.5C1 3.46243 3.46243 1 6.5 1C9.53757 1 12 3.46243 12 6.5Z" stroke="#858585" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </form>
+        </div>
+  
+        <div class="dropdown navigation__dropdown ">
+          <div class="dropdown__btn js-dropdownBtn">
+            <p class="dropdown__selected js-selected">Filter By Region</p>
+
+            <div class="dropdown__arrow">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L11 1" stroke="#111517" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          
+          <ul class="dropdown__menu js-dropdownMenu">
+            <li class="dropdown__option" data-value="africa">Africa</li>
+            <li class="dropdown__option" data-value="americas">America</li>
+            <li class="dropdown__option" data-value="asia">Asia</li>
+            <li class="dropdown__option" data-value="europe">Europe</li>
+            <li class="dropdown__option" data-value="oceania">Oceania</lis>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="countries">
+    <div class="container">
+      <div class="countries__wrapper js-countriesWrapper"></div>
+    </div>
+  </section>
+
+  <script type="module" src="./index.bundle.js"></script>
+</body>
+</html>

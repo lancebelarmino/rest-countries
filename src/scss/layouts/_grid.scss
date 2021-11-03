@@ -1,0 +1,9 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+
+  @include breakpoint-down(tablet-wide) {
+    max-width: 100%;
+    padding: 0 2.5rem;
+  }
+}

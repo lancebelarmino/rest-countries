@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  outline: none;
+  cursor: pointer;
+
+  &__theme {
+    display: flex;
+    align-items: center;
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem 2rem;
+    background: color(light-mode, elements);
+    color: color(light-mode, text);
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.05);
+  }
+}
