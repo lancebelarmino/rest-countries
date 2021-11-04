@@ -1,3 +1,7 @@
+import Storage from './helper-local-storage';
+
+const storage = new Storage('country');
+
 export default class Countries {
   constructor() {}
 
@@ -27,10 +31,30 @@ export default class Countries {
   }
 
   getCountry(country) {
+    this.clearUI();
+
     this.getData(`https://restcountries.com/v3.1/name/${country}`)
       .then(data => {
         data.forEach(country => {
-          this.renderCountry(country);
+          this.renderCountries(country);
+        });
+      })
+      .catch(err => this.renderErrorMessage());
+  }
+
+  getCountryDetails(country) {
+    this.getData(`https://restcountries.com/v3.1/alpha/${country}`)
+      .then(data => {
+        data.forEach(item => {
+          
+          const country = {
+            id: item.cioc,
+            name: item.name.common
+          };
+
+          storage.updateItem(country);
+
+          this.renderCountry(item);
         });
       })
       .catch(err => console.log(err));
@@ -54,7 +78,7 @@ export default class Countries {
 
     countriesBlock.classList.add('block', 'countries__block', 'js-block');
 
-    countriesBlock.setAttribute('data-value', country.name.common);
+    countriesBlock.setAttribute('data-value', country.cioc);
 
     countriesBlock.innerHTML = `
       <a href="/${countryName}" class="block__link js-blockLink">
@@ -139,6 +163,24 @@ export default class Countries {
         <span class="block__info">${country.languages[language]}</span>
       </p>
     `;
+
+    country.borders.forEach(country => {
+      const blockLink = document.createElement('a');
+
+      blockLink.classList.add('block__tag-item', 'js-blockTagItem');
+      
+      this.getData(`https://restcountries.com/v3.1/alpha/${country}`)
+      .then(data => {
+        data.forEach(country => {
+          blockLink.setAttribute('href', `/${country.name.common}`);
+          blockLink.setAttribute('data-value', `${country.cioc}`);
+          blockLink.textContent = country.name.common;
+        });
+      })
+      .catch(err => console.log(err));
+
+      blockTag.appendChild(blockLink);
+    });
   }
 
   renderErrorMessage() {

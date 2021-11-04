@@ -8,21 +8,6 @@
 
 
 
-// VENDORS
-//----------------------------------------
-//
-@import "vendors/vendors-dir";
-
-
-
-// VENDORS EXTENSION
-//----------------------------------------
-//
-@import "vendors-extension/bootstrap",
-        "vendors-extension/jquery-ui";
-
-
-
 // BASE
 //----------------------------------------
 //
@@ -45,14 +30,8 @@
 // LAYOUTS
 //----------------------------------------
 //
-@import "layouts/main",
-        "layouts/grid",
-        "layouts/navigation",
-        "layouts/forms",
-        "layouts/header",
-        "layouts/footer",
-        "layouts/sidebar",
-        "layouts/testimonials";
+@import "layouts/grid",
+        "layouts/header";
 
 
 
