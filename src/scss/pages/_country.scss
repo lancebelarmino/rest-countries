@@ -7,6 +7,10 @@
 
   &-btn__icon {
     margin-right: .75rem;
+
+    & svg {
+      stroke: color(light-mode, text);
+    }
   }
 
   &__block {

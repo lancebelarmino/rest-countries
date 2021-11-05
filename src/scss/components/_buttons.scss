@@ -6,6 +6,14 @@
   outline: none;
   cursor: pointer;
 
+  &__icon {
+    margin-right: 0.75rem;
+
+    & svg {
+      stroke: color(light-mode, text);
+    }
+  }
+
   &__theme {
     display: flex;
     align-items: center;

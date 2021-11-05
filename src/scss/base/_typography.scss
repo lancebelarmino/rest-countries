@@ -57,6 +57,7 @@ h3 {
 .search {
   &__prompt {
     &::placeholder {
+      color: color(light-mode, input);
       @include font-size(t-s, desktop);
     }
   }
@@ -124,6 +125,12 @@ h3 {
 // COMPONENTS
 // ----------------------------------------
 //
+.btn {
+  &__theme {
+    color: color(light-mode, text);
+  }
+}
+
 .country {
   &__block {
     & .block__detail {

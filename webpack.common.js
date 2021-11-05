@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
   entry: {
     index: ['regenerator-runtime/runtime.js', './src/js/index.js'],
-    country: ['regenerator-runtime/runtime.js', './src/js/country.js']
+    country: ['regenerator-runtime/runtime.js', './src/js/country.js'],
+    main: ['regenerator-runtime/runtime.js', './src/js/header.js']
   },
 
   output: {

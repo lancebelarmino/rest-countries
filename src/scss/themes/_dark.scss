@@ -1,0 +1,113 @@
+.dark-mode {
+  background: color(dark-mode, background);
+  
+
+  // BASE
+  // ----------------------------------------
+  //
+  h1, 
+  h2, 
+  h3, 
+  h4,
+  h5,
+  h6 {
+    color: color(dark-mode, text);
+  }
+
+  // COMPONENTS
+  // ----------------------------------------
+  //
+  .btn {
+    color: color(dark-mode, text);
+
+    &__icon {
+      & svg {
+        stroke: color(dark-mode, text);
+      }
+    }
+
+    &__back {
+      background: color(dark-mode, elements);
+    }
+  }
+
+  .search {
+    &__prompt {
+      background: color(dark-mode, elements);
+      color: color(dark-mode, text);
+
+      &::placeholder {
+        color: color(dark-mode, text);
+      }
+    }
+
+    &__icon {
+      & svg {
+        stroke: color(dark-mode, text);
+      }
+    }
+  }
+
+  .dropdown {
+    &__btn {
+      background: color(dark-mode, elements);
+    }
+
+    &__selected {
+      color: color(dark-mode, text);
+    }
+
+    &__arrow {
+      background: color(dark-mode, elements);
+
+      & svg {
+        stroke: color(dark-mode, text);
+      }
+    }
+  }
+
+  .block {
+    &__content {
+      background: color(dark-mode, elements);
+    }
+
+    &__detail {
+      color: color(dark-mode, text);
+    }
+
+    &__tag {
+      &-title {
+        color: color(dark-mode, text);
+      }
+
+      &-item {
+        background: color(dark-mode, elements);
+        color: color(dark-mode, text);
+      }
+    }
+  }
+
+  // LAYOUTS
+  // ----------------------------------------
+  //
+  .header {
+    background: color(dark-mode, elements);
+  }
+
+  // PAGES
+  // ----------------------------------------
+  //
+  .country {
+    &-btn__icon {
+      & svg {
+        stroke: color(dark-mode, text);
+      }
+    }
+
+    &__block {
+      & .block__content {
+        background: none;
+      }
+    }
+  }
+}

@@ -26,6 +26,10 @@
     padding: 0 25px;
     pointer-events: none;
     background: color(light-mode, elements);
+
+    & svg {
+      stroke: color(light-mode, text);
+    }
   }
 
   &__menu {
