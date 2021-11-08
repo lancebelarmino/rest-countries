@@ -20,7 +20,7 @@ const themeBtn = document.querySelector('.js-themeBtn');
 themeBtn.addEventListener('click', () => {
   const currentTheme = storage.getItems()[0];
 
-  if (currentTheme === 'light' || currentTheme.length === 0) {
+  if (currentTheme === 'light' || currentTheme === undefined) {
     theme.setTheme('dark');
     storage.updateItem('dark');
   } else if (currentTheme === 'dark') {

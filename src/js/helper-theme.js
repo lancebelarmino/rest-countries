@@ -1,7 +1,7 @@
 export default class Theme {
   constructor() {}
 
-  init(theme = 'light') {
+  init(theme) {
     this.setTheme(theme);
   }
 
@@ -12,7 +12,9 @@ export default class Theme {
       document.body.classList.add('dark-mode');
 
       this.updateBtn(theme);
-    } else if (theme === 'light') {
+    } else if (theme === 'light' || theme === undefined) {
+      console.log('Light Theme Enabled');
+
       document.body.classList.remove('dark-mode');
 
       this.updateBtn(theme);
@@ -34,7 +36,7 @@ export default class Theme {
         
         Light Mode
       `;
-    } else if (theme === 'light') {
+    } else if (theme === 'light' || theme === undefined) {
       themeBtn.innerHTML = `
         <span class="btn__icon js-btnIcon">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
