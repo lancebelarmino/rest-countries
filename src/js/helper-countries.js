@@ -78,7 +78,7 @@ export default class Countries {
 
     countriesBlock.classList.add('block', 'countries__block', 'js-block');
 
-    countriesBlock.setAttribute('data-value', country.cioc);
+    countriesBlock.setAttribute('data-value', country.cca3);
 
     countriesBlock.innerHTML = `
       <a href="/${countryName}" class="block__link js-blockLink">

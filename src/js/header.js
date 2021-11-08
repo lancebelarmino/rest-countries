@@ -1,3 +1,4 @@
+import "../scss/main.scss";
 import Storage from './helper-local-storage';
 import Theme from './helper-theme';
 
